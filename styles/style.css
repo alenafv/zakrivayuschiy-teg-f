@@ -292,7 +292,7 @@ dialog:not([open]) {
 .dialog-container {
   display: flex;
   gap: 20px;
-  align-items: center; 
+  align-items: center;
   min-height: 63px;
 }
 

@@ -213,6 +213,7 @@
   outline: 2px solid transparent;
   padding: 0;
   max-height: 34px;
+  border: none;
 }
 
 .card__icon-button:focus-visible {
@@ -252,10 +253,6 @@
   min-width: 39px;
 }
 
-.card__icon-button {
-  border: none;
-}
-
 .footer__button {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -292,9 +289,9 @@ dialog:not([open]) {
   justify-content: flex-end;
 }
 
-.dialog-container{
+.dialog-container {
   display: flex;
-  gap: 20px; 
+  gap: 20px;
   align-items: center; 
   min-height: 63px;
 }

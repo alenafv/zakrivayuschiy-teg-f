@@ -111,6 +111,7 @@
   .like-icon.is-liked .contour {
     fill: var(--sparks, #FF0000);
     transition: fill 0.3s 0.06s linear;
+    animation: opacity 0.3s ease-in 0.3s alternate;
   }
 
   .heart {
@@ -130,10 +131,6 @@
         transform: scale(1.5);
       }
   }
-
-  .like-icon.is-liked .contour {
-    animation: opacity 0.3s ease-in 0.3s alternate;
-  } 
 
   @keyframes opacity {
     from {

@@ -17,10 +17,10 @@
     opacity: 0.6;
     left: -20px;
     position: absolute;
-    animation: arrow 0.5s ease-in-out infinite alternate;
+    animation: slideInFromLeft 0.5s ease-in-out infinite alternate;
   }
 
-@keyframes arrow {
+@keyframes slideInFromLeft {
     from {
       left: -20px;
     }
@@ -64,13 +64,19 @@
     transform-origin: left;
   }
 
+  .main-button:not(:hover)::after {
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: left;
+  }
+
   .like-icon .sparks {
     opacity: 0;
   }
   
   .like-icon .core {
     fill: transparent;
-    transition: fill 0.03s linear;
+    transition: fill 0.3s 0.03s linear;
 }
   
 .like-icon:hover .core {
@@ -100,7 +106,7 @@
 
   .like-icon.is-liked .core {
     fill: var(--sparks, #FF0000);
-    transition: fill 0.3s 0.05s linear;
+    transition: fill 0.3s linear;
   }
 
   .like-icon.is-liked .main-body {
@@ -111,7 +117,6 @@
   .like-icon.is-liked .contour {
     fill: var(--sparks, #FF0000);
     transition: fill 0.3s 0.06s linear;
-    animation: opacity 0.3s ease-in 0.3s alternate;
   }
 
   .heart {
@@ -119,10 +124,10 @@
   }
 
   .like-icon.is-liked .heart {
-    animation: scale 0.3s ease-in 0.1s alternate;
+    animation: resize 0.3s ease-in 0.1s 1 alternate;
   }
 
-  @keyframes scale {
+  @keyframes resize {
     from {
         transform: scale(1);
       }
@@ -132,7 +137,11 @@
       }
   }
 
-  @keyframes opacity {
+  .like-icon.is-liked .sparks {
+    animation: fadeIn 0.3s ease-in 0.3s 1 alternate;
+  }
+
+  @keyframes fadeIn {
     from {
         opacity: 0;
       }

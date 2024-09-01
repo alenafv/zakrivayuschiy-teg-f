@@ -263,13 +263,14 @@
   grid-template-columns: repeat(2, auto);
   justify-content: start;
   align-items: center;
-  gap: 8px;
   background-color: var(--bg-color, #fff);
   color: var(--button-text-color, #fff);
-  margin: 54px auto;
+  margin: 54px auto 100px;
   width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   height: min(55px, 84px);
   padding: 0;
+  padding-inline-start: 8px;
+  line-height: 90%;
 }
 
 .dialog::backdrop {
@@ -352,13 +353,17 @@ dialog:not([open]) {
   }
 
   .last-button {
-    display: grid;
+    gap: 8px;
     grid-template-columns: auto;
     grid-template-rows: repeat(2, auto);
     justify-items: center;
     height: max(55px, 84px);
     justify-content: center;
-    padding: 15px 18px;
-    line-height: 90%;
+    padding: 8px 0 14px 8px;
+  }
+
+  .small-floppy {
+    width: 28px;
+    height: 28px;
   }
 }
